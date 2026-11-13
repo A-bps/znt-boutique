@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Veja os lançamentos de moda feminina da ZNT Boutique e confira os detalhes de cada peça.">
+  <title>Lançamentos | ZNT Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css?v=20261113-4">
+  <script src="catalogo.js?v=20261113-4" defer></script>
+  <script src="site.js?v=20261113-4" defer></script>
+  <link rel="stylesheet" href="navigation.css?v=20261113-4">
+  <script src="navigation.js?v=20261113-4" defer></script>
+</head>
+<body id="topo">
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <p class="announcement">Envios para todo o Brasil</p>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="ZNT Boutique — início"><img src="assets/logo.png" width="72" height="42" alt="ZNT Boutique"></a>
+      <button class="menu-toggle outline" type="button" aria-expanded="false" aria-controls="menu">Menu <span aria-hidden="true">☰</span></button>
+      <nav id="menu" aria-label="Menu principal">
+        <a href="lancamentos.html">Lançamentos</a>
+        <div class="clothing-menu">
+          <button class="clothing-toggle" type="button" aria-expanded="false" aria-controls="clothing-categories">Roupas <span class="clothing-chevron" aria-hidden="true"></span></button>
+          <div id="clothing-categories" class="clothing-categories" hidden>
+            <a href="lancamentos.html">Todas as peças</a>
+            <a href="lancamentos.html?categoria=Vestidos">Vestidos</a>
+            <a href="lancamentos.html?categoria=Blusas">Blusas</a>
+            <a href="lancamentos.html?categoria=Conjuntos">Conjuntos</a>
+            <a href="lancamentos.html?categoria=Jeans">Jeans</a>
+          </div>
+        </div>
+        <a href="index.html#sobre">A boutique</a>
+        <a href="#contato">Atendimento</a>
+      </nav>
+      <a class="header-favorites" href="lancamentos.html?favoritos=1"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span>Favoritos</span><span class="favorite-count">0</span></a>
+    </div>
+  </header>
+  <main id="conteudo" class="wrap">
+    <section class="catalog" id="lancamentos" aria-labelledby="catalog-title">
+      <header class="catalog-heading">
+        <h1 id="catalog-title">Lançamentos</h1>
+        <p>Vitrine de demonstração. Peças e preços ilustrativos.</p>
+      </header>
+      <div class="listing-search"><label class="sr-only" for="search">Buscar peças</label><input id="search" type="search" placeholder="Buscar na coleção…"><button id="favorites" type="button" class="outline" aria-pressed="false">Favoritos</button></div>
+      <div class="filters listing-filters" aria-label="Filtrar a coleção"><button type="button" data-filter="Todos" aria-pressed="true">Todas</button><button type="button" data-filter="Vestidos" aria-pressed="false">Vestidos</button><button type="button" data-filter="Blusas" aria-pressed="false">Blusas</button><button type="button" data-filter="Conjuntos" aria-pressed="false">Conjuntos</button><button type="button" data-filter="Jeans" aria-pressed="false">Jeans</button></div>
+      <div class="catalog-toolbar">
+        <p id="catalog-status" aria-live="polite"></p>
+        <div class="catalog-controls">
+          <label for="size-filter"><span>Tamanho</span>
+            <select id="size-filter">
+              <option value="">Todos</option>
+            </select>
+          </label>
+          <label for="sort"><span>Ordenar por</span>
+            <select id="sort">
+              <option value="latest">Mais recentes</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+      <p id="empty" class="empty" hidden>Nenhuma peça nesta seleção. <button type="button" id="clear" class="text-button">Limpar filtros</button></p>
+    </section>
+  </main>
+  <footer class="site-footer" id="contato">
+    <div class="wrap footer-intro">
+      <p>Seu estilo. <span>Seu momento.</span></p>
+      <a href="lancamentos.html">Explore a coleção <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-wordmark" aria-label="ZNT Boutique — início"><img src="assets/logo.png" width="105" height="75" alt="ZNT Boutique"></a>
+        <p>Moda feminina para acompanhar <br>os seus diferentes momentos.</p>
+        <span class="footer-delivery"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 5h11v12H3zM14 9h4l3 4v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>Envios para todo o Brasil</span>
+      </div>
+      <nav class="footer-column" aria-label="Coleção">
+        <h2>Explore</h2>
+        <a href="lancamentos.html">Lançamentos</a>
+        <a href="lancamentos.html?categoria=Vestidos">Vestidos</a>
+        <a href="lancamentos.html?categoria=Blusas">Blusas</a>
+        <a href="lancamentos.html?categoria=Conjuntos">Conjuntos</a>
+        <a href="lancamentos.html?categoria=Jeans">Jeans</a>
+      </nav>
+      <div class="footer-column footer-help">
+        <h2>Para ajudar</h2>
+        <a href="index.html#sobre">Sobre a boutique</a>
+        <a href="lancamentos.html?favoritos=1">Meus favoritos</a>
+        <details><summary>Como comprar</summary><p>Escolha a peça e o tamanho. Na página do produto, continue pelo WhatsApp para confirmar a disponibilidade e concluir o pedido com a ZNT.</p></details>
+        <details><summary>Entregas</summary><p>Enviamos para todo o Brasil. Informe seu CEP no atendimento para consultar o frete e o prazo do seu pedido.</p></details>
+        <details><summary>Tamanhos e medidas</summary><p>Os tamanhos estão na página de cada peça. Para conferir as medidas e o caimento, fale com a equipe antes de concluir seu pedido.</p></details>
+      </div>
+      <div class="footer-column footer-contact">
+        <h2>Atendimento</h2>
+        <p>Uma conversa para encontrar <br>a sua próxima peça.</p>
+        <a class="footer-phone" href="https://wa.me/5517981082833"><span class="footer-contact-label">WHATSAPP <span aria-hidden="true">↗</span></span><span>(17) 98108-2833</span></a>
+        <p class="footer-contact-note">Dúvidas sobre peças, tamanhos <br>e pedidos.</p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom"><small>© 2026 ZNT Boutique</small><span>Moda feminina · Brasil</span><a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a></div>
+  </footer>
+  <template id="product-template">
+    <article class="product">
+      <div class="product-visual"><img alt="" width="720" height="960"><button class="favorite" type="button" aria-pressed="false">♡</button></div>
+      <div class="product-info">
+        <p class="eyebrow product-category"></p><h2></h2>
+        <p class="price"></p>
+        <fieldset><legend>Tamanhos do modelo</legend><div class="sizes"></div></fieldset>
+        <a class="button product-details" href="lancamentos.html">Comprar <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

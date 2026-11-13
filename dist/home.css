@@ -1,0 +1,113 @@
+.stitch-home { --section-space: clamp(2.6rem, 5vw, 4.8rem); --header-height: 104px; }
+.stitch-home .section { padding-block: var(--section-space); }
+.stitch-home h1, .stitch-home .section h2, .shipping h2 { font: 600 clamp(1.9rem, 3.1vw, 2.65rem)/1.1 var(--display); text-transform: uppercase; }
+.stitch-home main h2 + p, .stitch-home figcaption { margin-top: .45rem; color: var(--muted); }
+.stitch-home .site-header { position: sticky; top: 0; z-index: 3; box-shadow: 0 2px 10px #17171712; }
+.stitch-home .site-header { transition: transform .24s ease; }
+.stitch-home .site-header.is-hidden-on-scroll:not(:has(:focus-visible)) { transform: translateY(calc(-100% - 12px)); }
+.stitch-home .skip:focus { z-index: 4; }
+@media (prefers-reduced-motion: reduce) {
+  .stitch-home .site-header { transition: none; }
+}
+.stitch-home .announcement { padding: .32rem 1rem; background: var(--ink); color: white; text-align: center; font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.stitch-home .header-inner { display: flex; justify-content: space-between; min-height: 76px; }
+.stitch-home .header-contact { flex-shrink: 0; }
+.stitch-home .menu-toggle { display: none; }
+#menu { display: flex; align-items: center; gap: clamp(.65rem, 1.45vw, 1.35rem); }
+#menu a, .clothing-toggle { font-size: .67rem; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+#menu a:hover { text-decoration: underline; }
+.clothing-menu { position: relative; }
+.clothing-toggle { display: flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0; border: 0; background: transparent; color: inherit; }
+.clothing-chevron { width: .42rem; height: .42rem; border: solid currentColor; border-width: 0 1px 1px 0; transform: translateY(-2px) rotate(45deg); }
+.clothing-toggle[aria-expanded="true"] .clothing-chevron { transform: translateY(2px) rotate(225deg); }
+.clothing-categories { position: absolute; top: 100%; left: -.85rem; min-width: 12rem; padding: .35rem; background: white; border: 1px solid var(--line); box-shadow: 0 10px 24px #17171718; }
+#menu .clothing-categories a { display: flex; align-items: center; min-height: 40px; padding: .5rem .65rem; text-transform: none; font-size: .75rem; }
+#menu .clothing-categories a:hover { background: var(--paper); }
+.stitch-home section[id], .stitch-home main[id] { scroll-margin-top: var(--header-height); }
+.stitch-home .hero { position: relative; isolation: isolate; width: 100%; min-height: calc(100vh - var(--header-height)); min-height: calc(100dvh - var(--header-height)); display: grid; align-items: center; overflow: hidden; color: white; background: #49413a; }
+.stitch-home .hero-image, .stitch-home .hero::after { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.stitch-home .hero-image { object-position: center 26%; }
+.stitch-home .hero-image[src$="hero-vestidos.jpg"] { top: -7%; height: 107%; object-position: center bottom; }
+.stitch-home .hero::after { content: ""; background: linear-gradient(90deg, #12100ee8, #14110ead 29%, #14110e32 64%, transparent 88%); }
+.stitch-home .hero-inner { padding: 4rem clamp(.5rem, 1.5vw, 1.5rem) 5rem; }
+.stitch-home .hero-label { display: inline-block; padding: .4rem .55rem; background: #29241fcc; }
+.stitch-home .hero h1 { max-width: 9ch; margin-top: .85rem; font-size: clamp(3.5rem, 5.4vw, 5.4rem); line-height: .99; }
+.stitch-home .hero h1 em { color: var(--sand); }
+.stitch-home .hero-copy { max-width: 43ch; margin: 1.1rem 0 1.55rem; color: #f9f5f0; font-size: clamp(.86rem, 1.25vw, 1.02rem); }
+.stitch-home .button.light { background: white; border-color: white; color: var(--ink); }
+.stitch-home .button.light:hover { background: var(--sand); border-color: var(--sand); }
+.hero-arrow { position: absolute; top: 50%; translate: 0 -50%; width: 42px; height: 48px; border: 0; border-radius: 3px; background: #17171780; color: white; font: 400 2rem/1 Arial, sans-serif; }
+.hero-arrow:hover { background: var(--ink); }
+.hero-arrow.prev { left: .55rem; }
+.hero-arrow.next { right: .55rem; }
+.hero-dots { position: absolute; bottom: .65rem; left: 50%; translate: -50% 0; display: flex; }
+.hero-dots button { width: 44px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; color: white; }
+.hero-dots button::after { content: ""; width: .65rem; height: .65rem; border: 1px solid white; border-radius: 50%; background: #17171765; }
+.hero-dots button[aria-current="true"]::after { background: white; }
+.benefits, .stitch-home .categories { background: var(--layer); }
+.benefits { padding-block: 1.15rem; }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; }
+.benefits article { display: flex; align-items: flex-start; gap: .7rem; padding: 1rem; background: white; }
+.benefit-icon { flex: 0 0 2rem; height: 2rem; display: grid; place-items: center; background: var(--sand); }
+.benefits h2 { font: 600 1.05rem/1.15 var(--display); text-transform: uppercase; }
+.benefits article p { margin-top: .2rem; font-size: .72rem; }
+.section-head, .catalog-meta { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1rem; }
+.stitch-home .catalog-controls input { width: min(15rem, 100%); min-width: 0; min-height: 44px; padding: .6rem .75rem; border: 1px solid #bcb0a4; border-radius: 3px; }
+.stitch-home .filters { justify-content: flex-start; gap: .4rem; margin-bottom: .65rem; }
+.stitch-home .filters button { min-height: 38px; border: 1px solid var(--line); background: white; }
+.stitch-home .filters button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: white; }
+.catalog-note { color: var(--muted); font-size: .72rem; }
+.product-contact, .fitting-button { width: 100%; }
+.stitch-home .product-info h3 { margin: 0; flex: 1; font-size: clamp(.8rem, 1.2vw, 1rem); line-height: 1.35; }
+.centered { text-align: center; margin-bottom: 1.45rem; }
+.stitch-home .category-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.stitch-home .category-grid .category { grid-column: span 4; min-height: clamp(12rem, 22vw, 19rem); padding: 1rem; }
+.stitch-home .category-grid .category-wide { grid-column: span 7; min-height: clamp(14rem, 29vw, 25rem); }
+.stitch-home .category-grid .category-medium { grid-column: span 5; min-height: clamp(14rem, 29vw, 25rem); }
+.stitch-home .category-grid .category span { display: block; padding: 0; }
+.category strong { display: block; font-size: clamp(1.35rem, 2.5vw, 2rem); }
+.category small { color: var(--sand); font: 700 .68rem/1.4 var(--body); }
+.stitch-home .category-grid .category-action { display: inline-block; margin-top: .4rem; padding: .35rem .5rem; background: white; color: var(--ink); font: 700 .67rem/1.3 var(--body); }
+.fitting, .contact { padding: clamp(1rem, 3vw, 2.6rem); background: white; border: 1px solid var(--line); }
+.fitting-grid { display: grid; grid-template-columns: 1fr 1fr .85fr; gap: 1rem; }
+.fitting-grid figure, .fitting-grid aside { background: var(--layer); }
+.fitting-grid img { aspect-ratio: 3 / 4; }
+.fitting-grid figcaption, .fitting-grid aside { padding: .8rem 1rem; }
+.shipping { background: var(--ink); color: white; }
+.shipping-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: var(--section-space); }
+.stitch-home .shipping p, .stitch-home main .shipping h2 + p { color: #eee5da; }
+.about, .contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 4vw, 3rem); align-items: center; }
+.about img { aspect-ratio: 4 / 3; }
+.about a { margin-top: .9rem; }
+.stitch-home .gallery { padding-top: 0; }
+.gallery-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .55rem; }
+.gallery-grid img { aspect-ratio: 1; }
+.contact .button { justify-self: end; }
+@media (max-width: 1050px) {
+  .stitch-home .menu-toggle { display: inline-flex; margin-left: auto; }
+  #menu { display: none; position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0; max-height: 70dvh; overflow: auto; padding: .65rem 4vw; background: white; box-shadow: 0 8px 18px #17171718; }
+  #menu.is-open { display: flex; }
+  #menu a { padding: .7rem .3rem; }
+  .clothing-toggle { width: 100%; justify-content: space-between; padding-inline: .3rem; }
+  .clothing-categories { position: static; padding-block: .2rem; box-shadow: none; }
+}
+@media (max-width: 760px) {
+  .stitch-home .header-inner { min-height: 62px; }
+  .stitch-home .hero { align-items: end; }
+  .stitch-home .hero-inner { padding-block: 3rem 4.2rem; }
+  .stitch-home .hero h1 { font-size: clamp(3rem, 10vw, 4.5rem); }
+  .stitch-home .hero::after { background: linear-gradient(0deg, #11100df2, #17141199 48%, #1714111a 87%); }
+  .stitch-home .hero-image[src$="hero-vestidos.jpg"] { object-position: 57% bottom; }
+  .hero-arrow { top: 34%; }
+  .section-head, .catalog-meta, .shipping-inner { flex-direction: column; align-items: start; }
+  .benefit-grid, .fitting-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+  .benefits article { padding: .65rem; gap: .4rem; }
+  .fitting-grid aside { grid-column: 1 / -1; }
+  .about, .contact { grid-template-columns: 1fr; }
+  .contact .button { justify-self: start; }
+  .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stitch-home .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stitch-home .category-grid .category { grid-column: span 1; min-height: 12rem; padding: .7rem; }
+  .stitch-home .category-grid .category-wide { grid-column: span 2; min-height: 16rem; }
+}
+
